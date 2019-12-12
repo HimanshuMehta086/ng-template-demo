@@ -1,7 +1,13 @@
 <h2>Learning Templates</h2>
 <hr />
-<!-- As such <ng-template> will not be instantiated -->
-<ng-template>
+
+<!-- 
+    Declaration and usage order doesn't matter
+    Also, <ng-container> can be considered instead of div 
+-->
+<div *ngTemplateOutlet="pageBlock"></div>
+
+<ng-template #pageBlock>
   <h3>Header in the Template</h3>
   <hr />
   <p>
