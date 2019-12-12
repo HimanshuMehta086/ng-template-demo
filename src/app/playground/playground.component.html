@@ -1,9 +1,16 @@
-<h2>Learning Templates</h2>
+<h2 #mainHeader>Learning Templates</h2>
 <hr />
-<!-- As such <ng-template> will not be instantiated -->
-<ng-template>
-  <h3>Header in the Template</h3>
+<ng-container *ngTemplateOutlet="pageBlock"></ng-container>
+
+<!-- 
+    mainHeader and counter belong to the enclosing 
+    playground.component.html 
+-->
+<ng-template #pageBlock>
+  <h3>Main Header is: {{ mainHeader.textContent }}</h3>
   <hr />
+  <h4>Current Counter is {{ counter }}</h4>
+
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
