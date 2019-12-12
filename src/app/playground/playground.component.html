@@ -2,17 +2,7 @@
 <hr />
 <ng-container
   *ngTemplateOutlet="
-    pageBlock;
+    template;
     context: { header: header, body: body, counter: counter }
   "
 ></ng-container>
-
-<ng-template #pageBlock let-header="header" let-body="body" let-index="counter">
-  <h3>{{ header }}</h3>
-  <hr />
-  <h4>Current Counter is {{ index }}</h4>
-
-  <p>
-    {{ body }}
-  </p>
-</ng-template>
